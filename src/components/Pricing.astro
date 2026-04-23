@@ -1,0 +1,21 @@
+---
+const plans = [
+  { name: "Free", price: "$0", features: ["5 projects", "Community support"] },
+  { name: "Pro", price: "$29/mo", features: ["Unlimited projects", "Priority support", "Analytics"] },
+  { name: "Enterprise", price: "Custom", features: ["SSO", "SLA", "Dedicated CSM"] },
+];
+---
+<section class="py-16 px-4">
+  <h2 class="text-3xl font-bold text-center mb-10">Pricing</h2>
+  <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+    {plans.map((p) => (
+      <div class="border rounded-lg p-6 text-center">
+        <h3 class="text-xl font-semibold">{p.name}</h3>
+        <p class="text-3xl font-bold my-4">{p.price}</p>
+        <ul class="space-y-2 text-gray-600">
+          {p.features.map((f) => <li>{f}</li>)}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
