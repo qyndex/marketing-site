@@ -5,14 +5,24 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "e2e": "playwright test",
+    "e2e:ui": "playwright test --ui",
+    "lint": "eslint src --ext .ts,.astro"
   },
   "dependencies": {
     "astro": "^6.0.6",
     "@astrojs/tailwind": "^6.0.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@vitest/coverage-v8": "^2.1.0",
     "typescript": "^5.9.3",
-    "tailwindcss": "^3.4.19"
+    "tailwindcss": "^3.4.19",
+    "vitest": "^2.1.0"
   }
 }
