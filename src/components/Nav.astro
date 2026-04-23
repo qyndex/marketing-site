@@ -1,0 +1,27 @@
+---
+const siteName = import.meta.env.PUBLIC_SITE_NAME ?? "Acme Platform";
+const links = [
+  { label: "Features", href: "#features" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Blog", href: "#blog" },
+  { label: "Contact", href: "#contact" },
+];
+---
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100" aria-label="Main navigation">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+    <a href="/" class="text-xl font-bold text-gray-900 tracking-tight">{siteName}</a>
+    <ul class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+      {links.map((l) => (
+        <li><a href={l.href} class="hover:text-blue-600 transition-colors">{l.label}</a></li>
+      ))}
+    </ul>
+    <a
+      href="#waitlist"
+      class="hidden md:inline-flex bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+      aria-label="Join the waitlist"
+    >
+      Get Early Access
+    </a>
+  </div>
+</nav>

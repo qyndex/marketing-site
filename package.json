@@ -15,6 +15,7 @@
     "lint": "eslint src --ext .ts,.astro"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
     "astro": "^6.0.6",
     "@astrojs/tailwind": "^6.0.2"
   },
